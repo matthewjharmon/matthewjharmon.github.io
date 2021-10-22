@@ -1,0 +1,9 @@
+The name is too long, 276 chars total.
+Trying to shorten...
+New name is preview.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=10&X-Amz-SignedHeaders=host&X-Amz-Signature=d966f430d91b54a5d6a270cc384d0570266f6630986851ac978045eef39e2270&X-Amz-Date=20211022T215825Z&X-Amz-Credential=AKIAJUG47Z6PGLLSJONA%2F.
+--2021-10-22 16:58:57--  https://s3-eu-west-1.amazonaws.com/ppreviews-orcid-012943482134916/8439035/preview.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=10&X-Amz-SignedHeaders=host&X-Amz-Signature=d966f430d91b54a5d6a270cc384d0570266f6630986851ac978045eef39e2270&X-Amz-Date=20211022T215825Z&X-Amz-Credential=AKIAJUG47Z6PGLLSJONA/20211022/eu-west-1/s3/aws4_request
+Resolving s3-eu-west-1.amazonaws.com (s3-eu-west-1.amazonaws.com)... 52.218.28.43
+Connecting to s3-eu-west-1.amazonaws.com (s3-eu-west-1.amazonaws.com)|52.218.28.43|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2021-10-22 16:58:57 ERROR 403: Forbidden.
+
