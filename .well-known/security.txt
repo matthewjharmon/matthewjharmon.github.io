@@ -1,0 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:wxe5aix9@duck.com
+Expires: 2023-10-31T00:00:00.000Z
+Encryption: https://matthewjharmon.com/0C39F1B2E80623B2.pub
+Acknowledgments: https://matthewjharmon/hall-of-fame.txt
+Preferred-Languages: en, de
+Canonical: https://matthewjharmon.com/security.txt
+Policy: https://cyberlaw.stanford.edu/blog/2020/09/importance-protecting-good-faith-security-research
+-----BEGIN PGP SIGNATURE-----
+
+iQJBBAEBCgArFiEEe52EnbuuVr5xJ6vODDnxsugGI7IFAmFznMMNHG1qaEBpdHlz
+Lm5ldAAKCRAMOfGy6AYjsrtVD/0bMGYTC7xKkMejqFv8o5gzPcvZo6Hwreq65TKB
+UXJhQDK7yH7/XJEJoDX2/8PTF6jfOTX/WyBIMMevnTLhUHuXMGuu7XYBRMQXacNl
+YwiLLAUKWK+GgXCysDSsnEsVZXu9vjwbcGtlak3ylUwc0BgwIh5WW0uR6VT/XWWw
+CfRUqrRu7MxU0o7Ibk9yCld7jJS+lA5AqPomPg1KKhDjJcJYeaGATR/y0/q7ncEF
+yQWZJq59cigzm9RVYqDsBTj3RN2Zs9P1H3mXSzssm0+cVC22YQiavwfaHV5YQOOi
+ejg/I1TYFykHnFBMZSJmslF8eQvNKfAu660wbRs9b/1hfsOdZZB+VA9YJhSm7sj6
+6IxUNkpYzwiqExmYByFrNu3IDcaALNx568WQgt/KwWAiOPzlvOhmpWhIuPYFxuHI
+xTpzazOhuJ7tDKwQXRLxLRGRf9Zf6UGvfduR/mR40tlT0wUYf6k8jn0z2mWBZPmH
+awRTSIFJi55Q+hVAFfXQFP8cGjEm8fEROLQ99rLSjv7cyq63eSl4xotq7QZ4riaH
+E6YsZg7uoToUIrey4ABBv8UHCwM99dYaD3cLjMVqs6ARwNfEDpe/gmYAmLMx39Yh
+YVguVb76ONMAI1do8mVappIwxefaYKphBTGs8lKIjpVAiqkCpJ2ipZPoDsalwvAC
+60Wqiw==
+=f1Bw
+-----END PGP SIGNATURE-----
