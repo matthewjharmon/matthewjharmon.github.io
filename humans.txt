@@ -1,0 +1,22 @@
+/* TEAM */
+
+                                
+Your title: Matthew J. Harmon
+Site: Personal website, resume, biography, staying in touch. 
+Twitter: @mjharmon
+Location: Minneapolis, Minnestoa, USA
+
+    							
+/* THANKS */
+    							
+Name: Natascha, Eise
+
+    						
+/* SITE */
+
+Last update: 2021/10/23 
+Standards: HTML5, CSS3, SVGs
+Components: All components localized. 
+Software: Hugo
+       
+                            
