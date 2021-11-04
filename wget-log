@@ -1,6 +1,0 @@
---2021-10-22 16:58:44--  https://s3-eu-west-1.amazonaws.com/ppreviews-orcid-012943482134916/8439035/preview.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256
-Resolving s3-eu-west-1.amazonaws.com (s3-eu-west-1.amazonaws.com)... 52.218.29.107
-Connecting to s3-eu-west-1.amazonaws.com (s3-eu-west-1.amazonaws.com)|52.218.29.107|:443... connected.
-HTTP request sent, awaiting response... 400 Bad Request
-2021-10-22 16:58:45 ERROR 400: Bad Request.
-
