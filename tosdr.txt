@@ -1,0 +1,44 @@
+# matthewjharmon.com/tosdr.txt
+#   
+#  _                _      _        _   
+# | |_ ___  ___  __| |_ __| |___  _| |_ 
+# | __/ _ \/ __|/ _` | '__| __\ \/ / __|
+# | || (_) \__ \ (_| | |_ | |_ >  <| |_ 
+#  \__\___/|___/\__,_|_(_) \__/_/\_\\__|
+#                                      
+# for 
+# _  _ ____ ___ ___ _  _ ____ _ _ _     _    _  _ ____ ____ _  _ ____ _  _ 
+# |\/| |__|  |   |  |__| |___ | | |     |    |__| |__| |__/ |\/| |  | |\ | 
+# |  | |  |  |   |  |  | |___ |_|_|    _|    |  | |  | |  \ |  | |__| | \| 
+#
+# Each document requires the following keys to be set:
+# 
+# Document-Name     - The Name of your document. e.g. "Privacy Policy"
+# Document-Url      - The Full url to your document e.g. "https://tosdr.org/legal"
+# Path              - The XPath of your document. Read more about it here: https://en.wikipedia.org/wiki/XPath
+# 
+# If none of these 3 keys are not given, your tosdr.txt is invalid. If you do not know how to set an XPath, use the value "//body"
+#
+#
+# To define the domains and subdomains of your service use the following key:
+#
+# Domains           - Comma separated list of domains without www prefix or paths. e.g. "tosdr.org,subdomain.tosdr.org,another.subdomain.tosdr.org"
+#
+#
+# If your service already exists in our Database, you can set the "ID" key as we do not update documents when this key is not given.
+#
+# ID                - Your Service ID
+#
+# Note: Your domain including top level domain HAS to match one of the urls in the database. If it does not, the ID key is skipped during parsing.
+
+ID: New
+
+Domains: matthewjharmon.com, mjh.email, itys.net, occt.net
+
+Document-Name: Privacy Policy
+Url: https://matthewjharmon.com/privacy
+Path: //body
+
+Document-Name: Legal Information
+Url: https://matthewjharmon.com/privacy
+Path: //body
