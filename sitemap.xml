@@ -3,13 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://matthewjharmon.com/</loc>
-    <lastmod>2021-11-05T14:26:37-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://matthewjharmon.com/privacy/</loc>
-    <lastmod>2021-11-05T14:26:37-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -19,6 +14,10 @@
   
   <url>
     <loc>https://matthewjharmon.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://matthewjharmon.com/</loc>
   </url>
   
   <url>
