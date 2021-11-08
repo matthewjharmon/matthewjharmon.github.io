@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Projects</title>
+    <title>Upgrade</title>
     <meta name="description" content="Biography website.">
     <meta name="author" content='Matthew J. Harmon'>
     <meta name="google-site-verification" content="fUZ8xpKvzC1luDBbe61cymCzd8DZavZwjsxjmU2EA1nc" />
@@ -66,13 +66,138 @@
 <hr>
 <div id="content">
 <div class="container">
-    <p><a href="/kmsp42">KMSP42 Network Walkthrough</a></p>
-<p><a href="/0xcafe.md">Night Time Coffee Series</a></p>
-<pre><code>59525.114837197405
-2021-11-07T02:45:21.933851
-2021310 W44
-@156.493
-</code></pre>
+    <h1 id="kmsp42-site-upgrade">KMSP42 Site Upgrade</h1>
+<p>Philosophy: Assume compromised and hostile.</p>
+<p>Compromised and each layer has been breached.</p>
+<p>Traffic hostile until proven otherwise.</p>
+<h2 id="data-rack">Data Rack</h2>
+<p><a href="https://www.tripplite.com/isobar-2-outlet-surge-protector-direct-plug-in-1410-joules-3-leds-black-housing-5-in-height~ultrablok">ULTRABLOK</a></p>
+<p><a href="https://www.cyberpower.com/global/en/product/series/pfc_sinewave_gen._1">CyberPower Sinewave UPS</a> <a href="https://www.youtube.com/watch?v=QhWF4pfNT5w">PFC</a></p>
+<p><a href="https://www.tripplite.com/pages/isobar">Tripp Lite ISOBAR Surge Protector</a> on each row.</p>
+<p>Life of a packet:</p>
+<ul>
+<li>
+<p>Fiber Switch at KMSP42</p>
+</li>
+<li>
+<p>OpenBSD Router
+pcengines APU2 <img src="apu2.jpg" alt="APU2 Board Topside"></p>
+<ul>
+<li>packet cleaning</li>
+<li>pf mine field</li>
+<li>pf <a href="https://calomel.org/pf_config.html">block table</a></li>
+<li>&ldquo;Five hundred or five million&rdquo;</li>
+<li>Border NTP
+<ul>
+<li>anycast, stratum 1, wide variety of methods of NTP</li>
+</ul>
+</li>
+<li>Stray DNS traffic redirect to local Unbound
+<ul>
+<li>Arguments against<br>
+&ldquo;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?&rdquo;
+<br>My users report a night and day difference in ads and some things not working on the open internet.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>pass in on $lan_if proto { udp, tcp } from any to any port domain rdr-to 192.168.42.1 port domain</p>
+</blockquote>
+<p>or enable NAT and DNS Redirect</p>
+<blockquote>
+<p>$lan_if = &ldquo;192.168.42.1&rdquo; <br>
+pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port domain rdr-to $dns_server port domain</p>
+</blockquote>
+</li>
+<li>
+<p>OPNsense on HardenedBSD Firewall</p>
+<ul>
+<li>
+<p>DC Power UPS (88.8 Watt hours)</p>
+</li>
+<li>
+<p><a href="https://protectli.com/product/fw6d/">Protectli FW6D</a> - 6 Port Intel® i5 <a href="https://ark.intel.com/content/www/us/en/ark/products/124967/intel-core-i58250u-processor-6m-cache-up-to-3-40-ghz.html">(8250U)</a></p>
+<ul>
+<li>16GB DDR4 SO-DIMM</li>
+<li>120GB mSATA (Kingston UV500)</li>
+<li>1TB Samsung SSD 870</li>
+<li>coreboot BIOS
+<img src="fw6de.jpg" alt="FW6D – 6 Port Intel® i5 "></li>
+</ul>
+</li>
+<li>
+<p>DHCP with Static ARP</p>
+</li>
+<li>
+<p>Tor Gateway &amp; Bridge</p>
+</li>
+<li>
+<p>NTP</p>
+<ul>
+<li>GlobalSat BU-353-S4 USB GPS Receiver</li>
+<li>Short hop 0.us.pool.ntp.org, and border router local</li>
+</ul>
+</li>
+<li>
+<p>Suricata</p>
+<ul>
+<li>IPS mode enabled
+<ul>
+<li><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></li>
+<li><a href="https://threatfox.abuse.ch/">ThreatFox</a></li>
+<li><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</li>
+</ul>
+</li>
+<li>Pattern Matcher: Hyperscan</li>
+<li>&ldquo;Schedule&rdquo; update an uneven period e.g. every 15 hours. It changes the hour of the day in recursive jobs.</li>
+</ul>
+</li>
+<li>
+<p>Gateway Monitors (dpinger)</p>
+<ul>
+<li>KMSP42 side of the CO switch</li>
+<li>Upstream CO router</li>
+<li>AS1299</li>
+<li>AS10242</li>
+<li>AS57</li>
+<li>AS13335</li>
+</ul>
+</li>
+<li>
+<p>LetsEncrypt ACME</p>
+</li>
+<li>
+<p>Unbound Nameserver</p>
+<ul>
+<li>Root Nameservers over Tor</li>
+<li>DNS over TLS Upstreama via Tor Gateway</li>
+<li>Unbound blocklist
+<img src="/UnboundDNSBL.png" alt="DNSBlockList"></li>
+</ul>
+</li>
+<li>
+<p>Wired Static DHCP hosts</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ubiquity Unifi Segment</p>
+<ul>
+<li>Security Gateway</li>
+<li>History of Vulnerabilities</li>
+<li>Dedicated RasPi for Java Gateway
+<ul>
+<li>Convoluted Walled Garden</li>
+</ul>
+</li>
+<li>Awesome Mesh</li>
+<li>Two Unifi switches</li>
+<li>two UniFi APs</li>
+<li>Two Mesh Nodes</li>
+<li></li>
+</ul>
+</li>
+</ul>
 
 </div>
 

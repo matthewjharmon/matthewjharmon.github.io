@@ -12,10 +12,10 @@
     
     <item>
       <title>Upgrade</title>
-      <link>https://matthewjharmon.com/site/</link>
+      <link>https://matthewjharmon.com/kmsp42/</link>
       <pubDate>Sat, 06 Nov 2021 22:20:30 -0500</pubDate>
       
-      <guid>https://matthewjharmon.com/site/</guid>
+      <guid>https://matthewjharmon.com/kmsp42/</guid>
       <description>KMSP42 Site Upgrade Philosophy: Assume compromised and hostile.
 Compromised and each layer has been breached.
 Traffic hostile until proven otherwise.
@@ -24,8 +24,7 @@ CyberPower Sinewave UPS PFC
 Tripp Lite ISOBAR Surge Protector on each row.
 Life of a packet:
   Fiber Switch at KMSP42
-  OpenBSD Router
- pcengines APU3 packet cleaning pf mine field pf block table &amp;ldquo;Five hundred or five million&amp;rdquo; Border NTP  anycast, stratum 1, wide variety of methods of NTP   Stray DNS traffic redirect to local Unbound  Arguments against</description>
+  OpenBSD Router pcengines APU2  packet cleaning pf mine field pf block table &amp;ldquo;Five hundred or five million&amp;rdquo; Border NTP  anycast, stratum 1, wide variety of methods of NTP   Stray DNS traffic redirect to local Unbound  Arguments against</description>
     </item>
     
     <item>
@@ -46,7 +45,7 @@ Life of a packet:
       <pubDate>Sat, 06 Nov 2021 21:43:39 -0500</pubDate>
       
       <guid>https://matthewjharmon.com/projects/</guid>
-      <description>Network Walkthrough
+      <description>KMSP42 Network Walkthrough
 Night Time Coffee Series
 59525.114837197405 2021-11-07T02:45:21.933851 2021310 W44 @156.493  </description>
     </item>
