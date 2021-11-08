@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>About</title>
+    <title>Upgrade</title>
     <meta name="description" content="Biography website.">
     <meta name="author" content='Matthew J. Harmon'>
     <meta name="google-site-verification" content="fUZ8xpKvzC1luDBbe61cymCzd8DZavZwjsxjmU2EA1nc" />
@@ -66,163 +66,137 @@
 <hr>
 <div id="content">
 <div class="container">
-    <h2 id="about-me">About Me</h2>
-<figure class="avatar">
-    <img src="/avatar.jpg"
-         alt="avatar"/> 
-</figure>
-
-<p>As a technologist since the ’90s, I have a strong track history of building resilient infrastructure and teaching the next generation about technology. I teach offensive and defensive cyber security and UNIX, including Linux, FreeBSD, OpenBSD, and HardenedBSD. Additionally, from time to time, I publish about cyber security, give interviews to local news stations, and present my research in public forums.</p>
-<p>Early on in my career, I was active as an international standards developer, functioning as a liaison from ANSI to ISO and the ITU.</p>
+    <h1 id="kmsp42-site-upgrade">KMSP42 Site Upgrade</h1>
+<p>Philosophy: Assume compromised and hostile.</p>
+<p>Compromised and each layer has been breached.</p>
+<p>Traffic hostile until proven otherwise.</p>
+<h2 id="data-rack">Data Rack</h2>
+<p><a href="https://www.tripplite.com/isobar-2-outlet-surge-protector-direct-plug-in-1410-joules-3-leds-black-housing-5-in-height~ultrablok">ULTRABLOK</a></p>
+<p><a href="https://www.cyberpower.com/global/en/product/series/pfc_sinewave_gen._1">CyberPower Sinewave UPS</a> <a href="https://www.youtube.com/watch?v=QhWF4pfNT5w">PFC</a></p>
+<p><a href="https://www.tripplite.com/pages/isobar">Tripp Lite ISOBAR Surge Protector</a> on each row.</p>
+<p>Life of a packet:</p>
 <ul>
-<li>ISO JTC 1 / SC 27 (Sub Committee on IT Security),</li>
-<li>SC 31 / WG 7 (Automatic Identification &amp; Data Collection, Working Group on Security),</li>
-<li>Technical Committee&rsquo;s 122 and 247 for Fraud countermeasures and Controls,</li>
-<li>Technical Group 7 Security for Item Management.</li>
-</ul>
-<h2 id="contributor">Contributor</h2>
+<li>
+<p>Fiber Switch at KMSP42</p>
+</li>
+<li>
+<p>OpenBSD Router</p>
 <ul>
-<li>Contributor to ISO/IEC 24791-6, SC 31, Software system infrastructure – Part 6: Security</li>
-<li>Contributor to AIM Global, RFID Experts Group, REG 352 RFID — Guidelines on data access security</li>
-<li>Contributor to ISO/IEC TR24729-4, Information technology – Radio frequency identification for item management – Implementation guidelines – Part 4: Tag data security</li>
-<li>Contributor to ISO/IEC 21450-{1,2,4} IEEE 1451.{1,2,4}, Information technology — Smart transducer interface for sensors and actuators — Common functions, communication protocols, and Transducer Electronic Data Sheet (TEDS) format</li>
-</ul>
-<h2 id="certifications-and-licenses">Certifications and Licenses</h2>
+<li>pcengines APU3</li>
+<li>packet cleaning</li>
+<li>pf mine field</li>
+<li>pf <a href="https://calomel.org/pf_config.html">block table</a></li>
+<li>&ldquo;Five hundred or five million&rdquo;</li>
+<li>Border NTP
 <ul>
-<li>GIAC Security Essentials (GSEC #19748)</li>
-<li>GIAC Incident Handler (GCIH #20483)</li>
-<li>GIAC Intrusion Analyst (GCIA #9570)</li>
-<li>(ISC)<sup>2</sup> Certified Information Systems Security Professional (CISSP #333906)</li>
-<li>Aviatrix Certified Engineer (ACE) Multi-Cloud Networking Associate (ACE #2021-10689)</li>
-<li>Gaming Commission Class E License (2015)</li>
+<li>anycast, stratum 1, wide variety of methods of NTP</li>
 </ul>
-<h2 id="additional-training">Additional Training</h2>
+</li>
+<li>Stray DNS traffic redirect to local Unbound
 <ul>
-<li>SANS MGT 414, SANS+S Training Program for CISSP Certification</li>
-<li>SANS SEC 440, 20 Critical Security Controls</li>
-<li>ANSI #248 “Delegate to Diplomat: Representing the United States in International Activities”</li>
+<li>Arguments against<br>
+&ldquo;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?&rdquo;
+<br>My users report a night and day difference in ads and some things not working on the open internet.</li>
 </ul>
-<h2 id="publications">Publications</h2>
-<p>In chronological order:</p>
-<ol>
-<li>M.J. Harmon, et. al.: <a href="https://web.archive.org/web/20190109120810/http://staff.washington.edu/dittrich/misc/ssh-analysis.txt">SSH CRC32 Vulnerability CVE-2001-0144</a>, <a href="https://www.snort.org/rule_docs/1-1324">Snort Signature 1324</a></li>
-<li>M.J. Harmon, N.E. Shawver: ISO Focus+, April 2010 <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a></li>
-<li>M.J. Harmon: CSO Outlook, June 2015: <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops with Critical Security Controls</a></li>
-<li>M.J. Harmon, et al.: Mpls / St. Paul Business Journal, October 2017: <a href="https://www.bizjournals.com/twincities/feature/table-of-experts/table-of-experts-cyber-security.html">Cyber Security Experts Panel</a></li>
-</ol>
-<h2 id="presentations">Presentations</h2>
-<p>Events, interviews, presentations:</p>
-<table>
-<thead>
-<tr>
-<th>Year</th>
-<th>Event</th>
-<th>Topic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2010</td>
-<td>ISO Focus+</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a></td>
-</tr>
-<tr>
-<td>2011</td>
-<td>MN Criminal Investigators</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Incident%20Handling%20and%20Forensics%20Techniques%20Oct%202011.pdf">Incident Handling and Forensics Techniques</a></td>
-</tr>
-<tr>
-<td>2011</td>
-<td>MN Gov Tech Symposium</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Why%20take%20the%20risk%20-%20MNGTS%20Dec%202011.pdf">Why take the risk?</a></td>
-</tr>
-<tr>
-<td>2012</td>
-<td>MN Council Non Profits</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Security_on_a_Shoestring_Budget.pdf">Security on a Shoestring Budget</a></td>
-</tr>
-<tr>
-<td>2012</td>
-<td>(ISC)<sup>2</sup> Twin Cities</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISC2TwinCities-24Oct2012-JavaExploitsOffenseAndDefense.pdf">Java Exploits Offense and Defense</a></td>
-</tr>
-<tr>
-<td>2013</td>
-<td>(ISC)<sup>2</sup> Twin Cities</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/ISC2TwinCities-18Oct2013-DDoS-Survival.pdf">DDoS Survival</a></td>
-</tr>
-<tr>
-<td>2014</td>
-<td>WCCO TV</td>
-<td>Security B-Sides MSP 2014</td>
-</tr>
-<tr>
-<td>2014</td>
-<td>Tech Republic Tech Pro</td>
-<td>Risk Assessments</td>
-</tr>
-<tr>
-<td>2014</td>
-<td>Saint Paul College ACM</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/StPaulCollege-ACM-2014Apr-Keynote.pdf">CyberSecurity Workshop</a></td>
-</tr>
-<tr>
-<td>2015</td>
-<td>SANS @ Night</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2015_ThreatIntelligence_NeighborhoodWatchForYourNetworks-v2.pdf">Threat Intelligence</a></td>
-</tr>
-<tr>
-<td>2015</td>
-<td>KSTP TV</td>
-<td>Television report on ATM Skimming</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>DataCenter Dynamics</td>
-<td>DDoS Attacks</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>Tech Republic Tech Pro</td>
-<td>Penetration Testing</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>Palo Alto FUEL User Group</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/FUEL-2015-May-State_of_Cyber_Security.pdf">State of Cyber Security</a></td>
-</tr>
-<tr>
-<td>2015</td>
-<td>CSO Outlook June Issue</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops</a></td>
-</tr>
-<tr>
-<td>2016-2018</td>
-<td>KSTP TV</td>
-<td>Breach Coverage</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>Cyber Security Summit</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Cyber_Security_Summit_2015_ThreatIntelligence_Intro-and-Foundations_v3.pdf">Threat Intelligence 101</a></td>
-</tr>
-<tr>
-<td>2017</td>
-<td>SANS @ Night</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2017-MJHIoT.pdf">Hands on Cyber Security: Internet of Everything</a></td>
-</tr>
-<tr>
-<td>2018</td>
-<td>SANS @ Night</td>
-<td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2018_CyberRanges_withScript.pdf">Cyber Ranges (with Script)</a></td>
-</tr>
-<tr>
-<td>2017-2018</td>
-<td>Saint Paul College</td>
-<td><a href="https://fossclass.github.io/">CSCI 2461 (Linux), CSCI 2482 (Incident Handling)</a></td>
-</tr>
-</tbody>
-</table>
+</li>
+</ul>
+<blockquote>
+<p>pass in on $lan_if proto { udp, tcp } from any to any port domain rdr-to 192.168.42.1 port domain</p>
+</blockquote>
+<p>or enable NAT and DNS Redirect</p>
+<blockquote>
+<p>$lan_if = &ldquo;192.168.42.1&rdquo; <br>
+pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port domain rdr-to $dns_server port domain</p>
+</blockquote>
+</li>
+<li>
+<p>HardenedBSD OPNsense Firewall</p>
+<ul>
+<li>
+<p>Protectli FW6D - 6 Port Intel® i5 (8250U)</p>
+<ul>
+<li>16GB DDR4 SO-DIMM</li>
+<li>120GB mSATA (Kingston UV500)</li>
+<li>1TB Samsung SSD 870</li>
+</ul>
+</li>
+<li>
+<p>coreboot BIOS</p>
+</li>
+<li>
+<p>DC Power UPS (88.8 Watt hours)</p>
+</li>
+<li>
+<p>DHCP with Static ARP</p>
+</li>
+<li>
+<p>Tor Gateway &amp; Bridge</p>
+</li>
+<li>
+<p>NTP</p>
+<ul>
+<li>GlobalSat BU-353-S4 USB GPS Receiver</li>
+<li>Short hop 0.us.pool.ntp.org, and border router local</li>
+</ul>
+</li>
+<li>
+<p>Suricata</p>
+<ul>
+<li>IPS mode enabled
+<ul>
+<li><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></li>
+<li><a href="https://threatfox.abuse.ch/">ThreatFox</a></li>
+<li><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</li>
+</ul>
+</li>
+<li>Pattern Matcher: Hyperscan</li>
+<li>&ldquo;Schedule&rdquo; update an uneven period e.g. every 15 hours. It changes the hour of the day in recursive jobs.</li>
+</ul>
+</li>
+<li>
+<p>Gateway Monitors (dpinger)</p>
+<ul>
+<li>My side of the CO switch, and my upstream CO router</li>
+<li>AS1299</li>
+<li>AS10242</li>
+<li>AS57</li>
+<li>AS13335</li>
+</ul>
+</li>
+<li>
+<p>LetsEncrypt ACME</p>
+</li>
+<li>
+<p>Unbound Nameserver</p>
+<ul>
+<li>DNS over TLS Upstreama via Tor Gateway</li>
+<li>Unbound blocklist
+<img src="/UnboundDNSBL.png" alt="DNSBlockList"></li>
+</ul>
+</li>
+<li>
+<p>Wired Static DHCP hosts</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ubiquity Unifi Segment</p>
+<ul>
+<li>Security Gateway</li>
+<li>History of Vulnerabilities</li>
+<li>Dedicated RasPi for Java Gateway
+<ul>
+<li>Convoluted Walled Garden</li>
+</ul>
+</li>
+<li>Awesome Mesh</li>
+<li>Two Unifi switches</li>
+<li>two UniFi APs</li>
+<li>Two Mesh Nodes</li>
+<li></li>
+</ul>
+</li>
+</ul>
 
 </div>
 

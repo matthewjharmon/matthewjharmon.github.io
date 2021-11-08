@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://matthewjharmon.com/</loc>
+    <lastmod>2021-11-06T22:20:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://matthewjharmon.com/site/</loc>
+    <lastmod>2021-11-06T22:20:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://matthewjharmon.com/0xcafe/</loc>
+    <lastmod>2021-11-06T22:00:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://matthewjharmon.com/projects/</loc>
+    <lastmod>2021-11-06T21:43:39-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://matthewjharmon.com/privacy/</loc>
     <priority>0</priority>
   </url>
@@ -10,10 +30,6 @@
   <url>
     <loc>https://matthewjharmon.com/videos/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://matthewjharmon.com/</loc>
   </url>
   
   <url>
