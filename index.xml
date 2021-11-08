@@ -18,13 +18,13 @@
       <guid>https://matthewjharmon.com/kmsp42/</guid>
       <description>KMSP42 Site Upgrade Philosophy: Assume compromised and hostile.
 Compromised and each layer has been breached.
-Traffic hostile until proven otherwise.
+Network hostile until proven otherwise.
 Data Rack ULTRABLOK
 CyberPower Sinewave UPS PFC
 Tripp Lite ISOBAR Surge Protector on each row.
 Fiber Switch at KMSP42
 OpenBSD Router pcengines APU2  APU2
- 3 x Intel I210 options, packet reassembly, normalization, pf minefield to block bucket pf block table &amp;ldquo;Five hundred or five million&amp;rdquo; Border NTP anycast, stratum 1, wide variety of methods of NTP Stray DNS traffic redirect to local Unbound Arguments against   &amp;quot;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?</description>
+ 3 x Intel I210  options, packet reassembly, normalization, pf minefield to block bucket pf block table  &amp;ldquo;Five hundred or five million&amp;rdquo;     Border NTP  anycast, stratum 1, wide variety of methods of NTP   Stray DNS traffic redirect to local Unbound  Arguments against     &amp;quot;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?</description>
     </item>
     
     <item>

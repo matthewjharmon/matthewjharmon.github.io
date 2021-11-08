@@ -83,7 +83,7 @@
     <h1 id="kmsp42-site-upgrade">KMSP42 Site Upgrade</h1>
 <p>Philosophy: Assume compromised and hostile.</p>
 <p>Compromised and each layer has been breached.</p>
-<p>Traffic hostile until proven otherwise.</p>
+<p>Network hostile until proven otherwise.</p>
 <h2 id="data-rack">Data Rack</h2>
 <p><a href="https://www.tripplite.com/isobar-2-outlet-surge-protector-direct-plug-in-1410-joules-3-leds-black-housing-5-in-height~ultrablok">ULTRABLOK</a></p>
 <p><a href="https://www.cyberpower.com/global/en/product/series/pfc_sinewave_gen._1">CyberPower Sinewave UPS</a> <a href="https://www.youtube.com/watch?v=QhWF4pfNT5w">PFC</a></p>
@@ -92,14 +92,26 @@
 <h2 id="openbsd-router-pcengines-apu2-apu2-board-topsideapu2jpg"><strong>OpenBSD Router pcengines APU2</strong> <img src="/apu2.jpg" alt="APU2 Board Topside"></h2>
 <p>APU2</p>
 <ul>
-<li>3 x Intel I210</li>
+<li>3 x Intel I210
+<ul>
 <li>options, packet reassembly, normalization, pf minefield to block bucket</li>
-<li>pf <a href="https://calomel.org/pf_config.html">block table</a></li>
+<li>pf <a href="https://calomel.org/pf_config.html">block table</a>
+<ul>
 <li>&ldquo;Five hundred or five million&rdquo;</li>
-<li>Border NTP</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Border NTP
+<ul>
 <li>anycast, stratum 1, wide variety of methods of NTP</li>
-<li>Stray DNS traffic redirect to local Unbound</li>
+</ul>
+</li>
+<li>Stray DNS traffic redirect to local Unbound
+<ul>
 <li>Arguments against</li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <pre><code>&quot;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?&quot;
@@ -120,21 +132,13 @@ pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port doma
 <ul>
 <li>
 <p><a href="https://protectli.com/product/fw6d/">Protectli FW6D</a> - 6 Port Intel® i5 <a href="https://ark.intel.com/content/www/us/en/ark/products/124967/intel-core-i58250u-processor-6m-cache-up-to-3-40-ghz.html">(8250U)</a></p>
-</li>
-<li>
-<p>DC Power UPS (88.8 Watt hours)</p>
-</li>
-<li>
-<p>16GB DDR4 SO-DIMM</p>
-</li>
-<li>
-<p>120GB mSATA (Kingston UV500)</p>
-</li>
-<li>
-<p>1TB Samsung SSD 870</p>
-</li>
-<li>
-<p>coreboot BIOS</p>
+<ul>
+<li>coreboot BIOS</li>
+<li>16GB DDR4 SO-DIMM</li>
+<li>120GB mSATA (Kingston UV500)</li>
+<li>1TB Samsung SSD 870</li>
+<li>DC Power UPS (88.8 Watt hours)</li>
+</ul>
 </li>
 <li>
 <p>DHCP with Static ARP</p>
@@ -144,27 +148,22 @@ pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port doma
 </li>
 <li>
 <p>NTP</p>
-</li>
-<li>
-<p>GlobalSat BU-353-S4 USB GPS Receiver</p>
-</li>
-<li>
-<p>Short hop 0.us.pool.ntp.org, and border router local</p>
+<ul>
+<li>GlobalSat BU-353-S4 USB GPS Receiver</li>
+<li>Short hop 0.us.pool.ntp.org, and border router local</li>
+</ul>
 </li>
 <li>
 <p>Suricata</p>
+<ul>
+<li>Inline IPS mode enabled
+<ul>
+<li><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></li>
+<li><a href="https://threatfox.abuse.ch/">ThreatFox</a></li>
+<li><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</li>
+</ul>
 </li>
-<li>
-<p>IPS mode enabled</p>
-</li>
-<li>
-<p><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></p>
-</li>
-<li>
-<p><a href="https://threatfox.abuse.ch/">ThreatFox</a></p>
-</li>
-<li>
-<p><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</p>
+</ul>
 </li>
 <li>
 <p>Pattern Matcher: Hyperscan</p>
@@ -174,43 +173,31 @@ pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port doma
 </li>
 <li>
 <p>Gateway Monitors (dpinger)</p>
-</li>
-<li>
-<p>KMSP42 side of the CO switch</p>
-</li>
-<li>
-<p>Upstream CO router</p>
-</li>
-<li>
-<p>AS1299</p>
-</li>
-<li>
-<p>AS10242</p>
-</li>
-<li>
-<p>AS57</p>
-</li>
-<li>
-<p>AS13335</p>
+<ul>
+<li>KMSP42 side of the CO switch</li>
+<li>Upstream CO router</li>
+<li>AS1299</li>
+<li>AS10242</li>
+<li>AS57</li>
+<li>AS13335</li>
+</ul>
 </li>
 <li>
 <p>LetsEncrypt ACME</p>
 </li>
 <li>
-<p>Unbound Nameserver</p>
-</li>
-<li>
-<p>Root Nameservers over Tor</p>
-</li>
-<li>
-<p>DNS over TLS Upstreama via Tor Gateway</p>
-</li>
-<li>
-<p>Unbound blocklist
-<img src="/UnboundDNSBL.png" alt="DNSBlockList"></p>
-</li>
-<li>
 <p>Wired Static DHCP hosts</p>
+</li>
+<li>
+<p>Unbound Nameserver</p>
+<ul>
+<li>Root Nameservers over Tor</li>
+<li>DNS over TLS Upstreama via Tor Gateway
+<ul>
+<li>Unbound blocklist <img src="/UnboundDNSBL.png" alt="DNSBlockList"></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="next-upgrade-pending-decomission">Next Upgrade (Pending Decomission)</h3>
@@ -222,9 +209,11 @@ Deployed, contained, awesome mesh, professional grade</p>
 <li>Convoluted Walled Garden is opaque</li>
 <li>History of mega vulnerabilities</li>
 </ul>
-<p>Is there something better or a better way to manage it?</p>
+<p>Is there something better or a better way to manage it?
+Upgrade Firmware on Security Gateway to OpenBSD?</p>
 <ul>
-<li>Ubiquity Unifi Segment
+<li>
+<p>Ubiquity Unifi Segment
 <img src="/unifi_usg.png" alt="UniFi Security Gateway">
 Security Gateway
 <img src="/unifi-switch.png" alt="UniFi Switch">
@@ -232,8 +221,9 @@ Two UniFi Switch
 <img src="/unifi_ap_ac_pro.png" alt="UniFi AP AC Pro">
 two UniFi APs
 <img src="/unifi_uap_beacon.png" alt="UniFi Beacon">
-Two Mesh Nodes
-Awesome Mesh</li>
+Two Mesh Nodes</p>
+<p>Awesome Mesh</p>
+</li>
 </ul>
 
 </div>
