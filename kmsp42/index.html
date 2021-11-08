@@ -68,8 +68,8 @@
                         <span class="nav-item navbar-text mx-1">/</span>
                     
                 
-                    <a class="nav-item nav-link" href="/kmsp42" title="KMSP42 Upgrade">
-                        KMSP42 Upgrade
+                    <a class="nav-item nav-link" href="/kmsp42" title="KMSP42">
+                        KMSP42
                     </a>
                     
                 
@@ -88,32 +88,24 @@
 <p><a href="https://www.tripplite.com/isobar-2-outlet-surge-protector-direct-plug-in-1410-joules-3-leds-black-housing-5-in-height~ultrablok">ULTRABLOK</a></p>
 <p><a href="https://www.cyberpower.com/global/en/product/series/pfc_sinewave_gen._1">CyberPower Sinewave UPS</a> <a href="https://www.youtube.com/watch?v=QhWF4pfNT5w">PFC</a></p>
 <p><a href="https://www.tripplite.com/pages/isobar">Tripp Lite ISOBAR Surge Protector</a> on each row.</p>
-<p>Life of a packet:</p>
-<ul>
-<li>
-<p>Fiber Switch at KMSP42</p>
-</li>
-<li>
-<p>OpenBSD Router
-pcengines APU2 <img src="/apu2.jpg" alt="APU2 Board Topside"></p>
+<p><strong>Fiber Switch at KMSP42</strong></p>
+<h2 id="openbsd-router-pcengines-apu2-apu2-board-topsideapu2jpg"><strong>OpenBSD Router pcengines APU2</strong> <img src="/apu2.jpg" alt="APU2 Board Topside"></h2>
+<p>APU2</p>
 <ul>
 <li>3 x Intel I210</li>
 <li>options, packet reassembly, normalization, pf minefield to block bucket</li>
 <li>pf <a href="https://calomel.org/pf_config.html">block table</a></li>
 <li>&ldquo;Five hundred or five million&rdquo;</li>
-<li>Border NTP
-<ul>
+<li>Border NTP</li>
 <li>anycast, stratum 1, wide variety of methods of NTP</li>
+<li>Stray DNS traffic redirect to local Unbound</li>
+<li>Arguments against</li>
 </ul>
-</li>
-<li>Stray DNS traffic redirect to local Unbound
-<ul>
-<li>Arguments against<br>
-&ldquo;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?&rdquo;
-<br>My users report a night and day difference in ads and some things not working on the open internet.</li>
-</ul>
-</li>
-</ul>
+<blockquote>
+<pre><code>&quot;Is breaking DNS and possibly incurring the wrath of someone trying to run a bitcoin miner pool worth it?&quot;
+My users report a night and day difference in ads and network functionality, some things not working on their mobile or logging in from a friends house
+</code></pre>
+</blockquote>
 <blockquote>
 <p>pass in on $lan_if proto { udp, tcp } from any to any port domain rdr-to 192.168.42.1 port domain</p>
 </blockquote>
@@ -122,22 +114,27 @@ pcengines APU2 <img src="/apu2.jpg" alt="APU2 Board Topside"></p>
 <p>$lan_if = &ldquo;192.168.42.1&rdquo; <br>
 pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port domain rdr-to $dns_server port domain</p>
 </blockquote>
-</li>
-<li>
-<p>OPNsense on HardenedBSD Firewall
-<img src="/fw6de.jpg" alt="FW6D – 6 Port Intel® i5 "></p>
+<h3 id="opnsense-on-hardenedbsd-firewall">OPNsense on HardenedBSD Firewall</h3>
+<p>Protectli FWSD</p>
+<p><img src="/fw6de.jpg" alt="FW6D – 6 Port Intel® i5 "></p>
 <ul>
 <li>
 <p><a href="https://protectli.com/product/fw6d/">Protectli FW6D</a> - 6 Port Intel® i5 <a href="https://ark.intel.com/content/www/us/en/ark/products/124967/intel-core-i58250u-processor-6m-cache-up-to-3-40-ghz.html">(8250U)</a></p>
 </li>
 <li>
 <p>DC Power UPS (88.8 Watt hours)</p>
-<ul>
-<li>16GB DDR4 SO-DIMM</li>
-<li>120GB mSATA (Kingston UV500)</li>
-<li>1TB Samsung SSD 870</li>
-<li>coreboot BIOS</li>
-</ul>
+</li>
+<li>
+<p>16GB DDR4 SO-DIMM</p>
+</li>
+<li>
+<p>120GB mSATA (Kingston UV500)</p>
+</li>
+<li>
+<p>1TB Samsung SSD 870</p>
+</li>
+<li>
+<p>coreboot BIOS</p>
 </li>
 <li>
 <p>DHCP with Static ARP</p>
@@ -147,70 +144,87 @@ pass in on $lan_if inet proto { udp, tcp } from $lan_if:network to any port doma
 </li>
 <li>
 <p>NTP</p>
-<ul>
-<li>GlobalSat BU-353-S4 USB GPS Receiver</li>
-<li>Short hop 0.us.pool.ntp.org, and border router local</li>
-</ul>
+</li>
+<li>
+<p>GlobalSat BU-353-S4 USB GPS Receiver</p>
+</li>
+<li>
+<p>Short hop 0.us.pool.ntp.org, and border router local</p>
 </li>
 <li>
 <p>Suricata</p>
-<ul>
-<li>IPS mode enabled
-<ul>
-<li><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></li>
-<li><a href="https://threatfox.abuse.ch/">ThreatFox</a></li>
-<li><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</li>
-</ul>
 </li>
-<li>Pattern Matcher: Hyperscan</li>
-<li>&ldquo;Schedule&rdquo; update an uneven period e.g. every 15 hours. It changes the hour of the day in recursive jobs.</li>
-</ul>
+<li>
+<p>IPS mode enabled</p>
+</li>
+<li>
+<p><a href="https://sslbl.abuse.ch/blacklist/">SSL Blacklist</a></p>
+</li>
+<li>
+<p><a href="https://threatfox.abuse.ch/">ThreatFox</a></p>
+</li>
+<li>
+<p><a href="http://doc.emergingthreats.net/bin/view/Main/EmergingFAQ">ET Feeds</a> Drop: botcc.portgrouped, ciarmy, compromised, drop, dshield, emerging, current_events, malware, mobile malware / trojan, emerging-worm</p>
+</li>
+<li>
+<p>Pattern Matcher: Hyperscan</p>
+</li>
+<li>
+<p>&ldquo;Schedule&rdquo; update an uneven period e.g. every 15 hours. It changes the hour of the day in recursive jobs.</p>
 </li>
 <li>
 <p>Gateway Monitors (dpinger)</p>
-<ul>
-<li>KMSP42 side of the CO switch</li>
-<li>Upstream CO router</li>
-<li>AS1299</li>
-<li>AS10242</li>
-<li>AS57</li>
-<li>AS13335</li>
-</ul>
+</li>
+<li>
+<p>KMSP42 side of the CO switch</p>
+</li>
+<li>
+<p>Upstream CO router</p>
+</li>
+<li>
+<p>AS1299</p>
+</li>
+<li>
+<p>AS10242</p>
+</li>
+<li>
+<p>AS57</p>
+</li>
+<li>
+<p>AS13335</p>
 </li>
 <li>
 <p>LetsEncrypt ACME</p>
 </li>
 <li>
 <p>Unbound Nameserver</p>
-<ul>
-<li>Root Nameservers over Tor</li>
-<li>DNS over TLS Upstreama via Tor Gateway</li>
-<li>Unbound blocklist
-<img src="/UnboundDNSBL.png" alt="DNSBlockList"></li>
-</ul>
+</li>
+<li>
+<p>Root Nameservers over Tor</p>
+</li>
+<li>
+<p>DNS over TLS Upstreama via Tor Gateway</p>
+</li>
+<li>
+<p>Unbound blocklist
+<img src="/UnboundDNSBL.png" alt="DNSBlockList"></p>
 </li>
 <li>
 <p>Wired Static DHCP hosts</p>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="next-upgrade-pending-decomission">Next Upgrade (Pending Decomission)</h2>
+<h3 id="next-upgrade-pending-decomission">Next Upgrade (Pending Decomission)</h3>
 <p>Pro:
-Deployed, contained, awesome mesh, professional grade
-Against:</p>
+Deployed, contained, awesome mesh, professional grade</p>
+<p>Against:</p>
 <ul>
-<li>
-<p>Dedicated RasPi for Java Gateway is a Kludge</p>
-</li>
-<li>
-<p>Convoluted Walled Garden is opaque</p>
-</li>
-<li>
-<p>History of mega vulnerabilities</p>
-</li>
-<li>
-<p>Ubiquity Unifi Segment
+<li>Dedicated RasPi for Java Gateway is a Cloud Management emulation Kludge</li>
+<li>Convoluted Walled Garden is opaque</li>
+<li>History of mega vulnerabilities</li>
+</ul>
+<p>Is there something better or a better way to manage it?</p>
+<ul>
+<li>Ubiquity Unifi Segment
 <img src="/unifi_usg.png" alt="UniFi Security Gateway">
 Security Gateway
 <img src="/unifi-switch.png" alt="UniFi Switch">
@@ -219,8 +233,7 @@ Two UniFi Switch
 two UniFi APs
 <img src="/unifi_uap_beacon.png" alt="UniFi Beacon">
 Two Mesh Nodes
-Awesome Mesh</p>
-</li>
+Awesome Mesh</li>
 </ul>
 
 </div>
