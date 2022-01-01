@@ -5,10 +5,19 @@
     <link>https://matthewjharmon.com/</link>
     <description>Recent content in About on Matthew J Harmon .com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Nov 2021 22:20:30 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 31 Dec 2021 21:10:54 -0600</lastBuildDate>
     
 	<atom:link href="https://matthewjharmon.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Media</title>
+      <link>https://matthewjharmon.com/media/</link>
+      <pubDate>Fri, 31 Dec 2021 21:10:54 -0600</pubDate>
+      
+      <guid>https://matthewjharmon.com/media/</guid>
+      <description>Media On KSTP discussing breaches.  Discussing ATM skimmers on KSTP.  </description>
+    </item>
     
     <item>
       <title>Upgrade</title>
