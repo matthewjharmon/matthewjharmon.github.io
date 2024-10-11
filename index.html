@@ -7,22 +7,16 @@
     <meta name="description" content="Biography website of Matthew J. Harmon.">
     <meta name="author" content="Matthew J. Harmon">
     <meta name="google-site-verification" content="fUZ8xpKvzC1luDBbe61cymCzd8DZavZwjsxjmU2EA1nc">
-
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fff;
-            padding: 20px;
-        }
-
-        .container {
-            width: 85%;
+            font-family: 'ETBembo', Georgia, serif;
+            max-width: 960px;
             margin: auto;
-            padding: 20px 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #111;
+            background-color: #f9f9f9;
         }
 
         nav {
@@ -47,12 +41,85 @@
         }
 
         h1, h2, h3 {
-            color: #444;
             font-weight: normal;
+            color: #444;
+            margin-bottom: 0;
         }
 
         h1 {
-            margin: 0;
+            font-size: 2.5em;
+            margin-top: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 2em;
+            margin-top: 2em;
+            background-color: #e7f3fe;
+            padding: 15px;
+            border-left: 8px solid #2196F3;
+        }
+
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-left: 0;
+        }
+
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0074D9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        section {
+            border-left: 4px solid #0074D9;
+            padding-left: 1em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 20px 0;
         }
 
         .avatar img {
@@ -64,13 +131,10 @@
             border: 1px solid #ddd;
         }
 
-        ul, ol {
-            padding-left: 20px;
-            margin-left: 0;
-        }
-
-        ul li, ol li {
-            margin-bottom: 10px;
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
         table {
@@ -92,170 +156,60 @@
         th, td {
             padding: 10px;
         }
-
-        .footer {
-            background: #f5f5f5;
-            color: #333;
-            text-align: center;
-            padding: 10px 0;
-            border-top: 1px solid #ccc;
-        }
-
-        .footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background-color: #e7f3fe;
-            border-left: 5px solid #2196F3;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 20px 0;
-        }
-
-        .sidebar {
-            float: right;
-            width: 25%;
-            margin: 20px 0;
-            padding: 10px;
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-        }
-
-        .main-content {
-            float: left;
-            width: 70%;
-            margin: 20px 0;
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        figcaption {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-            margin-top: 5px;
-        }
-
-        .note {
-            font-size: 14px;
-            color: #666;
-            margin-top: 20px;
-        }
-
-        blockquote {
-            font-style: italic;
-            color: #555;
-            border-left: 5px solid #ccc;
-            margin-left: 0;
-            padding-left: 10px;
-        }
-
-        .image-right {
-            float: right;
-            margin-left: 20px;
-            width: 200px;
-        }
-
-        .image-left {
-            float: left;
-            margin-right: 20px;
-            width: 200px;
-        }
-
-        .section-title {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
-
 <body>
     <nav>
         <h1>Matthew J. Harmon</h1>
         <div>
-            <a href="./MatthewJHarmon.pdf" title=" Resume">Resume</a>
-            <a href="https://orcid.org/0000-0003-1632-8927" title=" ORCID iD">ORCID iD</a>
+            <a href="./MatthewJHarmon.pdf" title="Resume">Resume</a>
+            <a href="https://orcid.org/0000-0003-1632-8927" title="ORCID iD">ORCID iD</a>
             <a href="https://caudaequinasyndrome.org/" title="Cauda Equina Syndrome">Cauda Equina Syndrome</a>
         </div>
     </nav>
 
     <div class="container">
-        <hr>
-        <div id="content" class="clearfix">
-            <div class="main-content">
-                <h2 id="about-me" class="section-title">About Me</h2>
+        <header>
+            <h1>Matthew J. Harmon</h1>
+            <h2>Cyber Security Researcher</h2>
+        </header>
+
+        <main>
+            <section id="about">
                 <figure class="avatar image-left">
                     <img src="avatar.jpg" alt="avatar">
                     <figcaption>Matthew J. Harmon</figcaption>
                 </figure>
-                <p>As a technologist since the ’90s, I have a strong track history of building resilient infrastructure and teaching the next generation about technology. I teach offensive and defensive cyber security and UNIX-like systems including; Linux, FreeBSD, OpenBSD, and HardenedBSD. Additionally, from time to time, I publish about cyber security, give interviews to local news stations, and present my research in public forums.</p>
-                <p>Early on in my career, I was active as an international standards developer, functioning as a liaison from ANSI to ISO and the ITU.</p>
+                <p>Since the 1990s, Matthew J. Harmon has been a dedicated technologist with a passion for building resilient infrastructure and imparting knowledge to the next generation of technology enthusiasts. His expertise encompasses offensive and defensive cybersecurity, as well as UNIX-like systems including Linux, FreeBSD, OpenBSD, and HardenedBSD. Over the years, he has also shared his insights on cybersecurity through various publications, interviews with local news stations, and presentations in public forums.</p>
+
+                <p>Early in his career, Matthew was actively involved in international standards development, serving as a liaison from ANSI to both ISO and the ITU. His contributions spanned multiple technical committees, including ISO JTC 1 / SC 27 (Sub Committee on IT Security), SC 31 / WG 7 (Automatic Identification & Data Collection, Working Group on Security), and Technical Committees 122 and 247 for Fraud Countermeasures and Controls, as well as Technical Group 7 Security for Item Management. His work in these roles was instrumental in shaping global security standards.</p>
+
+                <p>Matthew's contributions to the field of cybersecurity are notable. He played a key role in the development of ISO/IEC 24791-6, which focuses on software system infrastructure security. He also contributed to AIM Global's RFID Experts Group, working on guidelines for data access security, and was involved in the creation of ISO/IEC TR24729-4, providing implementation guidelines for tag data security in radio frequency identification for item management. Additionally, he contributed to ISO/IEC 21450 and IEEE 1451 standards, which define smart transducer interfaces for sensors and actuators, ensuring common functions, communication protocols, and Transducer Electronic Data Sheet (TEDS) format.</p>
+
+                <p>Throughout his career, Matthew has earned several certifications that reflect his deep knowledge and expertise in cybersecurity. These include the GIAC Security Essentials (GSEC), GIAC Incident Handler (GCIH), GIAC Intrusion Analyst (GCIA), and the (ISC)<sup>2</sup> Certified Information Systems Security Professional (CISSP). He is also an Aviatrix Certified Engineer (ACE) Multi-Cloud Networking Associate, has held a Gaming Commission Class E License, and is a National Weather Service Certified Storm Spotter.</p>
+
+                <p>Matthew has also completed additional training, such as SANS MGT 414 (SANS+S Training Program for CISSP Certification) and SANS SEC 440 (20 Critical Security Controls). He has taken part in ANSI's "Delegate to Diplomat: Representing the United States in International Activities" program and served as a volunteer for the Hennepin County Medical Reserve Corps (MRC).</p>
+            </section>
+
+            <section id="contact">
+                <h3>Social Media Links</h3>
+                <div class="contact-info">
+                    <p><strong>Email</strong>: <a href="mailto:social@mjh.email">social@mjh.email</a></p>
+                    <p><strong>Mastodon</strong>: <a href="https://social.threata.gent/@m" rel="me">m@social.threata.gent</a></p>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h3 style="font-size: 2em; background-color: #f1f1f1; padding: 15px; border-left: 8px solid #0074D9;">Projects</h3>
                 <ul>
-                    <li>ISO JTC 1 / SC 27 (Sub Committee on IT Security),</li>
-                    <li>SC 31 / WG 7 (Automatic Identification & Data Collection, Working Group on Security),</li>
-                    <li>Technical Committee’s 122 and 247 for Fraud countermeasures and Controls,</li>
-                    <li>Technical Group 7 Security for Item Management.</li>
+                    <li><a href="https://ModifiedJulian.Date" target="_blank">ModifiedJulian.Date</a> - The Modified Julian Date.</li>
+                    <li><a href="https://zine.mismi.net" target="_blank">zine.mismi.net</a> - An online zine.</li>
+                    <li><a href="https://AppliedLinux.net" target="_blank">Applied Linux.net</a> - Introduction to my manuscript Applied Linux including audio narration.</li>
                 </ul>
+            </section>
 
-                <h2 id="contributor" class="section-title">Contributor</h2>
-                <ul>
-                    <li>Contributor to ISO/IEC 24791-6, SC 31, Software system infrastructure – Part 6: Security</li>
-                    <li>Contributor to AIM Global, RFID Experts Group, REG 352 RFID — Guidelines on data access security</li>
-                    <li>Contributor to ISO/IEC TR24729-4, Information technology – Radio frequency identification for item management – Implementation guidelines – Part 4: Tag data security</li>
-                    <li>Contributor to ISO/IEC 21450-{1,2,4} IEEE 1451.{1,2,4}, Information technology — Smart transducer interface for sensors and actuators — Common functions, communication protocols, and Transducer Electronic Data Sheet (TEDS) format</li>
-                </ul>
-
-                <h2 id="certifications-and-licenses" class="section-title">Certifications and Licenses</h2>
-                <ul>
-                    <li>GIAC Security Essentials (GSEC #19748)</li>
-                    <li>GIAC Incident Handler (GCIH #20483)</li>
-                    <li>GIAC Intrusion Analyst (GCIA #9570)</li>
-                    <li>(ISC)<sup>2</sup> Certified Information Systems Security Professional (CISSP #333906)</li>
-                    <li>Aviatrix Certified Engineer (ACE) Multi-Cloud Networking Associate (ACE #2021-10689)</li>
-                    <li>Gaming Commission Class E License (2015)</li>
-                    <li>National Weather Service Certified Storm Spotter (2022)</li>
-                </ul>
-
-                <h2 id="additional-training" class="section-title">Additional Training</h2>
-                <ul>
-                    <li>SANS MGT 414, SANS+S Training Program for CISSP Certification</li>
-                    <li>SANS SEC 440, 20 Critical Security Controls</li>
-                    <li>ANSI #248 “Delegate to Diplomat: Representing the United States in International Activities”</li>
-                    <li>Hennepin County MRC (Medical Reserve Corps) Volunteer</li>
-                </ul>
-
-                <h2 id="publications" class="section-title">Publications</h2>
-                <p>In chronological order:</p>
-                <ol>
-                    <li>M.J. Harmon, et. al.: Dittrich, 2001 <a href="https
-
-://web.archive.org/web/20190109120810/http://staff.washington.edu/dittrich/misc/ssh-analysis.txt">SSH CRC32 Vulnerability CVE-2001-0144</a>, <a href="https://www.snort.org/rule_docs/1-1324">Snort Signature 1324</a></li>
-                    <li>M.J. Harmon, N.E. Shawver: ISO Focus+, April 2010 <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a></li>
-                    <li>M.J. Harmon: CSO Outlook, June 2015: <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops with Critical Security Controls</a></li>
-                    <li>M.J. Harmon, et al.: Mpls / St. Paul Business Journal, October 2017: <a href="https://www.bizjournals.com/twincities/feature/table-of-experts/table-of-experts-cyber-security.html">Cyber Security Experts Panel</a></li>
-                </ol>
-
-                <h2 id="presentations" class="section-title">Presentations</h2>
-                <p><a href="media/index.html">Media events</a></p>
-                <p>Events, interviews, presentations:</p>
+            <section id="presentations">
+                <h3>Presentations</h3>
                 <table>
                     <thead>
                         <tr>
@@ -278,87 +232,4 @@
                         <tr>
                             <td>2011</td>
                             <td>MN Gov Tech Symposium</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Why%20take%20the%20risk%20-%20MNGTS%20Dec%202011.pdf">Why take the risk?</a></td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>MN Council Non Profits</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Security_on_a_Shoestring_Budget.pdf">Security on a Shoestring Budget</a></td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>(ISC)<sup>2</sup> Twin Cities</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISC2TwinCities-24Oct2012-JavaExploitsOffenseAndDefense.pdf">Java Exploits Offense and Defense</a></td>
-                        </tr>
-                        <tr>
-                            <td>2013</td>
-                            <td>(ISC)<sup>2</sup> Twin Cities</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/ISC2TwinCities-18Oct2013-DDoS-Survival.pdf">DDoS Survival</a></td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td><a href="https://kstp.com/">WCCO TV</a></td>
-                            <td>Security B-Sides MSP 2014</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>Tech Republic Tech Pro</td>
-                            <td>Risk Assessments</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>Saint Paul College ACM</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/StPaulCollege-ACM-2014Apr-Keynote.pdf">CyberSecurity Workshop</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>SANS @ Night</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2015_ThreatIntelligence_NeighborhoodWatchForYourNetworks-v2.pdf">Threat Intelligence</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td><a href="https://kstp.com/">KSTP TV</a></td>
-                            <td>Television report on ATM Skimming</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>DataCenter Dynamics</td>
-                            <td>DDoS Attacks</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>Tech Republic Tech Pro</td>
-                            <td>Penetration Testing</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>Palo Alto FUEL User Group</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/FUEL-2015-May-State_of_Cyber_Security.pdf">State of Cyber Security</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>CSO Outlook June Issue</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops</a></td>
-                        </tr>
-                        <tr>
-                            <td>2016-2018</td>
-                            <td>KSTP TV</td>
-                            <td><a href="https://web.archive.org/web/20190609105615/http://blog.matthewjharmon.com/2016/06/30/kstp-breach-coverage-with-mjh/index.html">Noodles & Company Breach Coverage</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td><a href="https://www.cybersecuritysummit.org/">Cyber Security Summit</a></td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Cyber_Security_Summit_2015_ThreatIntelligence_Intro-and-"></a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <hr>
-    </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Matthew J. Harmon</p>
-    </footer>
-</body>
-</html>
+                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Why%20take%20the%
