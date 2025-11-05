@@ -114,6 +114,27 @@ header.hero {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  flex: 0 1 auto;
+  align-items: flex-start;
+}
+
+.cta-note {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(148, 163, 184, 0.75);
+}
+
+.cta-note[aria-hidden="true"] {
+  visibility: hidden;
 }
 
 .btn {
@@ -131,10 +152,28 @@ header.hero {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
+.btn.is-loading {
+  background: rgba(148, 163, 184, 0.35);
+  color: rgba(15, 23, 42, 0.65);
+  cursor: wait;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn[aria-disabled="true"] {
+  pointer-events: none;
+}
+
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 20px 40px rgba(56, 189, 248, 0.35);
+}
+
+.btn.is-loading:hover,
+.btn.is-loading:focus-visible {
+  box-shadow: none;
+  transform: none;
 }
 
 .btn.ghost {
@@ -518,6 +557,110 @@ body.theme-light .footer {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 0.8rem;
+}
+
+.resume-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.resume-gate__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 13, 23, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.resume-gate__panel {
+  position: relative;
+  max-width: min(420px, 90vw);
+  margin: 10vh auto;
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 2.2rem 2.4rem 2rem;
+  box-shadow: 0 30px 80px rgba(8, 13, 23, 0.55);
+  color: var(--text);
+}
+
+:root[data-theme="light"] .resume-gate__panel,
+body.theme-light .resume-gate__panel {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.15);
+}
+
+.resume-gate__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.resume-gate__lead {
+  margin: 0.4rem 0 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resume-gate__status {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+.resume-gate__progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.resume-gate__meter {
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.resume-gate__tip {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+
+.resume-gate__action {
+  background: var(--accent);
+  color: #0b172a;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+:root[data-theme="light"] .resume-gate__status,
+body.theme-light .resume-gate__status {
+  background: rgba(148, 163, 184, 0.14);
+}
+
+@media (max-width: 520px) {
+  .resume-gate__panel {
+    margin: 12vh 1.25rem;
+    padding: 1.8rem 1.6rem;
+  }
 }
 
 @media (max-width: 720px) {
