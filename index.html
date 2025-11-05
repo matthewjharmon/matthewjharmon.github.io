@@ -23,7 +23,7 @@
             and mentoring teams on both sides of the cyber defense spectrum.
           </p>
           <div class="cta-group">
-            <a class="btn" href="./MatthewJHarmon.pdf">Download Résumé</a>
+            <button class="btn" type="button" id="resume-button">Download Résumé</button>
             <a class="btn ghost" href="mailto:social@mjh.email">Contact</a>
           </div>
           <dl class="quick-links">
@@ -157,8 +157,8 @@
             <p>Check My Footprint pairs live IP telemetry with Shodan InternetDB and VirusTotal intelligence for instant situational awareness.</p>
           </article>
           <article>
-            <h3><a href="https://AppliedLinux.net">AppliedLinux.net</a></h3>
-            <p>Home for Matthew’s Applied Linux manuscript and narrated lessons for quickly levelling up operators.</p>
+            <h3><a href="https://appliedlinuxaudiobook.s3.fr-par.scw.cloud/Applied%20Linux/index.html">Applied Linux Audiobook Edition</a></h3>
+            <p>Hosted reading of Applied Linux with synced manuscript and audio chapters direct from the S3 distribution.</p>
           </article>
           <article>
             <h3><a href="https://DotDotSlash.ing">DotDotSlash.ing</a></h3>
@@ -281,6 +281,23 @@
       </section>
     </main>
 
+    <div class="resume-gate" id="resume-gate" hidden>
+      <div class="resume-gate__backdrop"></div>
+      <div class="resume-gate__panel" role="dialog" aria-modal="true" aria-labelledby="resume-gate-title">
+        <button type="button" class="resume-gate__close" id="resume-gate-close" aria-label="Cancel verification">&times;</button>
+        <h2 id="resume-gate-title">Quick Verification</h2>
+        <p class="resume-gate__lead">We run a tiny in-browser proof-of-work to keep bots from bulk-downloading the résumé.</p>
+        <div class="resume-gate__status" id="resume-gate-status">
+          Preparing challenge…
+        </div>
+        <div class="resume-gate__progress">
+          <div class="resume-gate__meter" id="resume-gate-meter"></div>
+        </div>
+        <p class="resume-gate__tip">Keep this window open—once verification completes, the download will start automatically.</p>
+        <button type="button" class="resume-gate__action" id="resume-gate-retry" hidden>Try Again</button>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer__links">
         <a href="https://caudaequinasyndrome.org/">Cauda Equina Syndrome Foundation</a>
@@ -289,5 +306,6 @@
       </div>
       <p>&copy; 2024 Matthew J. Harmon. All rights reserved.</p>
     </footer>
+    <script src="pow.js" defer></script>
   </body>
 </html>
