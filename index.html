@@ -1,333 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>About the Professional Experience of Matthew J. Harmon</title>
-    <meta name="description" content="Biography website of Matthew J. Harmon.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matthew J. Harmon · Cyber Security Researcher</title>
+    <meta name="description" content="Biography and professional highlights of Matthew J. Harmon, cyber security researcher and standards contributor.">
     <meta name="author" content="Matthew J. Harmon">
     <meta name="google-site-verification" content="fUZ8xpKvzC1luDBbe61cymCzd8DZavZwjsxjmU2EA1nc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'ETBembo', Georgia, serif;
-            max-width: 960px;
-            margin: auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #111;
-            background-color: #f9f9f9;
-        }
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <div class="hero__intro">
+          <p class="eyebrow">Cyber Security Researcher · Standards Advocate · Educator</p>
+          <h1>Matthew J. Harmon</h1>
+          <p class="lead">
+            Three decades of building resilient infrastructure, championing global security standards,
+            and mentoring teams on both sides of the cyber defense spectrum.
+          </p>
+          <div class="cta-group">
+            <a class="btn" href="./MatthewJHarmon.pdf">Download Résumé</a>
+            <a class="btn ghost" href="mailto:social@mjh.email">Contact</a>
+          </div>
+          <dl class="quick-links">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:social@mjh.email">social@mjh.email</a></dd>
+            </div>
+            <div>
+              <dt>Signal</dt>
+              <dd><span class="mono">mjh.42</span></dd>
+            </div>
+            <div>
+              <dt>ORCID</dt>
+              <dd><a href="https://orcid.org/0000-0003-1632-8927">0000-0003-1632-8927</a></dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="hero__portrait">
+          <img src="avatar.jpg" alt="Portrait of Matthew J. Harmon">
+          <figcaption>Matthew J. Harmon</figcaption>
+        </figure>
+      </div>
+      <nav class="hero__nav" aria-label="Primary">
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#standards">Standards Work</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#presentations">Presentations</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f5f5f5;
-            color: #333;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-        }
+    <main>
+      <section id="profile" class="section">
+        <div class="section__label">Profile</div>
+        <h2>Building resilient systems since the dial-up era</h2>
+        <p>
+          Matthew J. Harmon is a technologist who has been hands-on with offensive and defensive cyber security since
+          the 1990s. He has designed and hardened UNIX-like environments—from Linux and FreeBSD to OpenBSD and
+          HardenedBSD—while teaching teams how to interpret threat intelligence, hunt for intrusions, and recover from
+          incidents without losing momentum.
+        </p>
+        <p>
+          Matthew shares his perspectives through public speaking, media contributions, and written guidance that
+          translate complex emerging threats into actionable playbooks. He maintains a steady focus on practical,
+          evidence-based security that meets teams where they are.
+        </p>
+        <div class="highlights">
+          <article>
+            <h3>Offense &amp; Defense</h3>
+            <p>Bridges red team insights with blue team readiness to shorten detection and response cycles.</p>
+          </article>
+          <article>
+            <h3>Infrastructure Resilience</h3>
+            <p>Designs secure-by-default network and cloud topologies, stress-tested against modern adversaries.</p>
+          </article>
+          <article>
+            <h3>Security Education</h3>
+            <p>Develops courses, workshops, and mentoring programs that raise the bar for cyber practitioners.</p>
+          </article>
+        </div>
+      </section>
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-        }
+      <section id="standards" class="section alt">
+        <div class="section__label">Global Standards &amp; Advisory Work</div>
+        <h2>Helping shape international security guidance</h2>
+        <div class="grid two-column">
+          <div>
+            <p>
+              Matthew represented ANSI as liaison to ISO and the ITU, contributing to the development of foundational
+              security standards within ISO JTC 1 / SC 27, SC 31 / WG 7, and technical committees focused on fraud
+              countermeasures and secure item management.
+            </p>
+            <p>
+              His work helped establish baseline expectations for radio-frequency identification security, software
+              infrastructure protections, and smart transducer interfaces (ISO/IEC 21450, IEEE 1451).
+            </p>
+          </div>
+          <div>
+            <ul class="icon-list">
+              <li>ISO/IEC 24791-6 software system infrastructure security</li>
+              <li>AIM Global RFID Experts Group data access security guidance</li>
+              <li>ISO/IEC TR 24729-4 RFID tag data security implementation guide</li>
+              <li>Contributor to ISO/IEC 21450 &amp; IEEE 1451 smart transducer standards</li>
+              <li>Co-author, <a href="https://gcve.eu/bcp/gcve-bcp-02/">GCVE-BCP-02 Practical Guide to Vulnerability Handling &amp; Disclosure</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+      <section id="credentials" class="section">
+        <div class="section__label">Credentials &amp; Training</div>
+        <h2>Certifications that reinforce proven experience</h2>
+        <div class="grid two-column cards">
+          <article>
+            <h3>Certifications</h3>
+            <ul>
+              <li>GIAC Security Essentials (GSEC)</li>
+              <li>GIAC Certified Incident Handler (GCIH)</li>
+              <li>GIAC Certified Intrusion Analyst (GCIA)</li>
+              <li>(ISC)<sup>2</sup> CISSP</li>
+              <li>Aviatrix Certified Engineer (ACE) Multi-Cloud Networking Associate</li>
+              <li>Gaming Commission Class&nbsp;E License</li>
+              <li>National Weather Service Certified Storm Spotter</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Selected Training &amp; Service</h3>
+            <ul>
+              <li>SANS MGT 414 · CISSP prep</li>
+              <li>SANS SEC 440 · 20 Critical Security Controls</li>
+              <li>ANSI “Delegate to Diplomat” program</li>
+              <li>Hennepin County Medical Reserve Corps volunteer</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        h1, h2, h3 {
-            font-weight: normal;
-            color: #444;
-            margin-bottom: 0;
-        }
+      <section id="projects" class="section alt">
+        <div class="section__label">Selected Projects</div>
+        <h2>Tools and resources built for practitioners</h2>
+        <div class="grid two-column cards project-cards">
+          <article>
+            <h3><a href="https://ModifiedJulian.Date">ModifiedJulian.Date</a></h3>
+            <p>A precise time-synchronisation reference that presents Modified Julian Dates with clean visual context.</p>
+          </article>
+          <article>
+            <h3><a href="https://zine.mismi.net">zine.mismi.net</a></h3>
+            <p>An experimental online zine exploring technology, resilience, and human factors in security.</p>
+          </article>
+          <article>
+            <h3><a href="https://AppliedLinux.net">AppliedLinux.net</a></h3>
+            <p>Home for Matthew’s Applied Linux manuscript and narrated lessons for quickly levelling up operators.</p>
+          </article>
+          <article>
+            <h3><a href="https://DotDotSlash.ing">DotDotSlash.ing</a></h3>
+            <p>A lighter look at path traversal mishaps—memes, cautionary tales, and teachable moments.</p>
+          </article>
+        </div>
+      </section>
 
-        h1 {
-            font-size: 2.5em;
-            margin-top: 0.5em;
-        }
+      <section id="publications" class="section">
+        <div class="section__label">Publications</div>
+        <h2>Research and commentary</h2>
+        <ol class="timeline">
+          <li>
+            <div class="timeline__meta">2001</div>
+            <div class="timeline__body">
+              <strong>SSH CRC32 Vulnerability CVE-2001-0144</strong> —
+              joint analysis with Dittrich; see <a href="https://web.archive.org/web/20190109120810/http://staff.washington.edu/dittrich/misc/ssh-analysis.txt">archived write-up</a>
+              and <a href="https://www.snort.org/rule_docs/1-1324">Snort Signature 1324</a>.
+            </div>
+          </li>
+          <li>
+            <div class="timeline__meta">2010</div>
+            <div class="timeline__body">
+              “Plugging Security Gaps,” ISO Focus+ — co-authored guidance on closing RFID security exposures.
+              <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Read article</a>.
+            </div>
+          </li>
+          <li>
+            <div class="timeline__meta">2015</div>
+            <div class="timeline__body">
+              “Taking Control of IT Ops with Critical Security Controls,” CSO Outlook — a pragmatic checklist for
+              mid-market teams.
+              <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Read article</a>.
+            </div>
+          </li>
+          <li>
+            <div class="timeline__meta">2017</div>
+            <div class="timeline__body">
+              “Cyber Security Experts Panel,” Minneapolis/St. Paul Business Journal — perspectives on prioritising
+              investments amid rapid change.
+              <a href="https://www.bizjournals.com/twincities/feature/table-of-experts/table-of-experts-cyber-security.html">Read panel recap</a>.
+            </div>
+          </li>
+          <li>
+            <div class="timeline__meta">2025</div>
+            <div class="timeline__body">
+              Co-author of <a href="https://gcve.eu/bcp/gcve-bcp-02/">GCVE-BCP-02 Practical Guide to Vulnerability Handling and Disclosure</a> —
+              actionable guidance for Global CVE Allocation stakeholders on coordinated vulnerability response.
+            </div>
+          </li>
+        </ol>
+      </section>
 
-        h2 {
-            font-size: 1.8em;
-            color: #555;
-        }
+      <section id="presentations" class="section alt">
+        <div class="section__label">Presentations &amp; Media</div>
+        <h2>Selected talks, interviews, and workshops</h2>
+        <div class="event-grid">
+          <article>
+            <h3>ISO Focus+</h3>
+            <p class="event-grid__meta">2010 · Global Standards</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a>
+          </article>
+          <article>
+            <h3>MN Criminal Investigators</h3>
+            <p class="event-grid__meta">2011 · Law Enforcement</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Incident%20Handling%20and%20Forensics%20Techniques%20Oct%202011.pdf">Incident Handling &amp; Forensics</a>
+          </article>
+          <article>
+            <h3>MN Gov Tech Symposium</h3>
+            <p class="event-grid__meta">2011 · Public Sector</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Why%20take%20the%20risk%20-%20MNGTS%20Dec%202011.pdf">Why Take the Risk?</a>
+          </article>
+          <article>
+            <h3>MN Council of Nonprofits</h3>
+            <p class="event-grid__meta">2012 · Nonprofit Security</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Security_on_a_Shoestring_Budget.pdf">Security on a Shoestring Budget</a>
+          </article>
+          <article>
+            <h3>(ISC)<sup>2</sup> Twin Cities</h3>
+            <p class="event-grid__meta">2012 · Chapter Workshop</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISC2TwinCities-24Oct2012-JavaExploitsOffenseAndDefense.pdf">Java Exploits: Offense &amp; Defense</a>
+          </article>
+          <article>
+            <h3>(ISC)<sup>2</sup> Twin Cities</h3>
+            <p class="event-grid__meta">2013 · Chapter Workshop</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/ISC2TwinCities-18Oct2013-DDoS-Survival.pdf">DDoS Survival</a>
+          </article>
+          <article>
+            <h3>Saint Paul College ACM</h3>
+            <p class="event-grid__meta">2014 · Academic Keynote</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/StPaulCollege-ACM-2014Apr-Keynote.pdf">Cyber Security Workshop</a>
+          </article>
+          <article>
+            <h3>TechRepublic Tech Pro</h3>
+            <p class="event-grid__meta">2014-2015 · Contributor</p>
+            Interviews on risk assessments, penetration testing, and defensive strategy.
+          </article>
+          <article>
+            <h3>SANS @ Night</h3>
+            <p class="event-grid__meta">2015 · Practitioner Series</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2015_ThreatIntelligence_NeighborhoodWatchForYourNetworks-v2.pdf">Threat Intelligence Neighborhood Watch</a>
+          </article>
+          <article>
+            <h3>Palo Alto FUEL User Group</h3>
+            <p class="event-grid__meta">2015 · Community Briefing</p>
+            <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/FUEL-2015-May-State_of_Cyber_Security.pdf">State of Cyber Security</a>
+          </article>
+          <article>
+            <h3>DataCenter Dynamics</h3>
+            <p class="event-grid__meta">2015 · Infrastructure Forum</p>
+            DDoS mitigation strategies for critical workloads.
+          </article>
+          <article>
+            <h3>Media Coverage</h3>
+            <p class="event-grid__meta">2014-2018 · KSTP, WCCO, TechRepublic</p>
+            Insights on ATM skimming, breach response, and emerging threats including
+            <a href="https://web.archive.org/web/20190609105615/http://blog.matthewjharmon.com/2016/06/30/kstp-breach-coverage-with-mjh/index.html">Noodles &amp; Company breach analysis</a>.
+          </article>
+        </div>
+      </section>
+    </main>
 
-        h3 {
-            font-size: 2em;
-            margin-top: 2em;
-            background-color: #e7f3fe;
-            padding: 15px;
-            border-left: 8px solid #2196F3;
-        }
-
-        p {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-
-        ul, ol {
-            padding-left: 20px;
-            margin-left: 0;
-        }
-
-        ul li, ol li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #0074D9;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 2em;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 3em;
-            font-size: 0.9em;
-            color: #777;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        section {
-            border-left: 4px solid #0074D9;
-            padding-left: 1em;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-        }
-
-        .container {
-            width: 85%;
-            margin: auto;
-            padding: 20px 0;
-        }
-
-        .avatar img {
-            border-radius: 50%;
-            width: 150px;
-            height: auto;
-            float: left;
-            margin-right: 20px;
-            border: 1px solid #ddd;
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f9f9f9;
-            text-align: left;
-        }
-
-        th, td {
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-<nav>
-    <h1>Matthew J. Harmon</h1>
-    <div>
-        <a href="./MatthewJHarmon.pdf" title="Resume">Resume</a>
-        <a href="https://orcid.org/0000-0003-1632-8927" title="ORCID iD">ORCiD</a>
-        <a href="https://caudaequinasyndrome.org/" title="Cauda Equina Syndrome">Cauda Equina Syndrome</a>
-        <a href="https://blog.itys.net" title="I Told You So blog">I T Y S</a>
-    </div>
-</nav>
-
-    <div class="container">
-        <header>
-            <h1>Matthew J. Harmon</h1>
-            <h2>Cyber Security Researcher</h2>
-        </header>
-
-        <main>
-            <section id="about">
-                <figure class="avatar image-left">
-                    <img src="avatar.jpg" alt="avatar">
-                    <figcaption>Matthew J. Harmon</figcaption>
-                </figure>
-		            <p>Since the 1990s, Matthew J. Harmon has been a dedicated technologist with a passion for building resilient infrastructure and imparting knowledge to the next generation of technology enthusiasts. His expertise encompasses offensive and defensive cybersecurity, as well as UNIX-like systems including Linux, FreeBSD, OpenBSD, and HardenedBSD. Over the years, he has also shared his insights on cybersecurity through various publications, interviews with local news stations, and presentations in public forums.</p>
-
-            <p>Early in his career, Matthew was actively involved in international standards development, serving as a liaison from ANSI to both ISO and the ITU. His contributions spanned multiple technical committees, including ISO JTC 1 / SC 27 (Sub Committee on IT Security), SC 31 / WG 7 (Automatic Identification & Data Collection, Working Group on Security), and Technical Committees 122 and 247 for Fraud Countermeasures and Controls, as well as Technical Group 7 Security for Item Management. His work in these roles was instrumental in shaping global security standards.</p>
-
-            <p>Matthew's contributions to the field of cybersecurity are notable. He played a key role in the development of ISO/IEC 24791-6, which focuses on software system infrastructure security. He also contributed to AIM Global's RFID Experts Group, working on guidelines for data access security, and was involved in the creation of ISO/IEC TR24729-4, providing implementation guidelines for tag data security in radio frequency identification for item management. Additionally, he contributed to ISO/IEC 21450 and IEEE 1451 standards, which define smart transducer interfaces for sensors and actuators, ensuring common functions, communication protocols, and Transducer Electronic Data Sheet (TEDS) format.</p>
-
-            <p>Throughout his career, Matthew has earned several certifications that reflect his deep knowledge and expertise in cybersecurity. These include the GIAC Security Essentials (GSEC), GIAC Incident Handler (GCIH), GIAC Intrusion Analyst (GCIA), and the (ISC)<sup>2</sup> Certified Information Systems Security Professional (CISSP). He is also an Aviatrix Certified Engineer (ACE) Multi-Cloud Networking Associate, has held a Gaming Commission Class E License, and is a National Weather Service Certified Storm Spotter.</p>
-
-            <p>Matthew has also completed additional training, such as SANS MGT 414 (SANS+S Training Program for CISSP Certification) and SANS SEC 440 (20 Critical Security Controls). He has taken part in ANSI's "Delegate to Diplomat: Representing the United States in International Activities" program and served as a volunteer for the Hennepin County Medical Reserve Corps (MRC).</p>
-
-            </section>
-
-            <section id="contact">
-                <h3>Social Media Links</h3>
-                <div class="contact-info">
-                    <p><strong>Email</strong>: <a href="mailto:social@mjh.email">social@mjh.email</a></p>
-                    <p><strong>Mastodon</strong>: <a href="https://social.threata.gent/@m" rel="me">m@social.threata.gent</a></p>
-                </div>
-            </section>
-
-            <section id="projects">
-                <h3 style="font-size: 2em; background-color: #f1f1f1; padding: 15px; border-left: 8px solid #0074D9;">Projects</h3>
-                <ul>
-                    <li><a href="https://ModifiedJulian.Date" target="_blank">ModifiedJulian.Date</a> - The Modified Julian Date.</li>
-                    <li><a href="https://zine.mismi.net" target="_blank">zine.mismi.net</a> - An online zine.</li>
-                    <li><a href="https://AppliedLinux.net" target="_blank">Applied Linux.net</a> - Introduction to my Applied Linux manuscript including audio narration.</li>
-                    <li><a href="https://DotDotSlash.ing" target="_blank">DotDotSlash.ing</a> - Meme's (some PG-13) related to everyones favorite vulnerability, directory / path traversal.</li>
-		</ul>
-            </section>
-
-	    <section id="publications">
-		 <h3 id="publications" class="section-title">Publications</h2>
-                <p>In chronological order:</p>
-                <ol>
-                    <li>M.J. Harmon, et. al.: Dittrich, 2001 <a href="https
-
-://web.archive.org/web/20190109120810/http://staff.washington.edu/dittrich/misc/ssh-analysis.txt">SSH CRC32 Vulnerability CVE-2001-0144</a>, <a href="https://www.snort.org/rule_docs/1-1324">Snort Signature 1324</a></li>
-                    <li>M.J. Harmon, N.E. Shawver: ISO Focus+, April 2010 <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a></li>
-                    <li>M.J. Harmon: CSO Outlook, June 2015: <a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops with Critical Security Controls</a></li>
-                    <li>M.J. Harmon, et al.: Mpls / St. Paul Business Journal, October 2017: <a href="https://www.bizjournals.com/twincities/feature/table-of-experts/table-of-experts-cyber-security.html">Cyber Security Experts Panel</a></li>
-                </ol>
-	    </section>
-
-            <section id="presentations">
-                <h3>Presentations</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>Event</th>
-                            <th>Topic</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2010</td>
-                            <td><a href="https://www.iso.org/isofocus/x/">ISO Focus+</a></td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISOFP20100401-PluggingSecurityGaps.pdf">Plugging Security Gaps</a></td>
-                        </tr>
-                        <tr>
-                            <td>2011</td>
-                            <td>MN Criminal Investigators</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Incident%20Handling%20and%20Forensics%20Techniques%20Oct%202011.pdf">Incident Handling and Forensics Techniques</a></td>
-                        </tr>
-                        <tr>
-                            <td>2011</td>
-                            <td>MN Gov Tech Symposium</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Why%20take%20the%20risk%20-%20MNGTS%20Dec%202011.pdf">Why take the risk?</a></td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>MN Council Non Profits</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Security_on_a_Shoestring_Budget.pdf">Security on a Shoestring Budget</a></td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>(ISC)<sup>2</sup> Twin Cities</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/blob/master/ISC2TwinCities-24Oct2012-JavaExploitsOffenseAndDefense.pdf">Java Exploits Offense and Defense</a></td>
-                        </tr>
-                        <tr>
-                            <td>2013</td>
-                            <td>(ISC)<sup>2</sup> Twin Cities</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/ISC2TwinCities-18Oct2013-DDoS-Survival.pdf">DDoS Survival</a></td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td><a href="https://kstp.com/">WCCO TV</a></td>
-                            <td>Security B-Sides MSP 2014</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>Tech Republic Tech Pro</td>
-                            <td>Risk Assessments</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>Saint Paul College ACM</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/StPaulCollege-ACM-2014Apr-Keynote.pdf">CyberSecurity Workshop</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>SANS @ Night</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/SANS_Minneapolis_2015_ThreatIntelligence_NeighborhoodWatchForYourNetworks-v2.pdf">Threat Intelligence</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td><a href="https://kstp.com/">KSTP TV</a></td>
-                            <td>Television report on ATM Skimming</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>DataCenter Dynamics</td>
-                            <td>DDoS Attacks</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>Tech Republic Tech Pro</td>
-                            <td>Penetration Testing</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>Palo Alto FUEL User Group</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/FUEL-2015-May-State_of_Cyber_Security.pdf">State of Cyber Security</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>CSO Outlook June Issue</td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/CSOOutlook-June2015-TakingControlWithCriticalSecurityControls.pdf">Taking Control of IT Ops</a></td>
-                        </tr>
-                        <tr>
-                            <td>2016-2018</td>
-                            <td>KSTP TV</td>
-                            <td><a href="https://web.archive.org/web/20190609105615/http://blog.matthewjharmon.com/2016/06/30/kstp-breach-coverage-with-mjh/index.html">Noodles & Company Breach Coverage</a></td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td><a href="https://www.cybersecuritysummit.org/">Cyber Security Summit</a></td>
-                            <td><a href="https://github.com/itriskltd/Information-Security-and-Risk-Public-Presentations/raw/master/Cyber_Security_Summit_2015_ThreatIntelligence_Intro-and-">Cyber Security Summit Presentation</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Matthew J. Harmon. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="https://caudaequinasyndrome.org/">Cauda Equina Syndrome Foundation</a>
+        <a href="https://blog.itys.net/">I Told You So (Blog)</a>
+      </div>
+      <p>&copy; 2024 Matthew J. Harmon. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
